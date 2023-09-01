@@ -1,4 +1,4 @@
-
+hello
 
 Write the list of all Helm releases in the cluster into `/root/releases`.
 
