@@ -29,7 +29,8 @@ Helm Values: Allow to customise the YAML template-files in a Chart when creating
 
 ```plain
 helm ls
-```{{exec}}
+```
+{{exec}}
 
 </details>
 
