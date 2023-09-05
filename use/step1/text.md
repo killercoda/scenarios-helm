@@ -22,13 +22,12 @@ Helm Values: Allow to customise the YAML template-files in a Chart when creating
 
 
 <br>
-<details><summary>Tip 1</summary>
+<details><summary>Tip 1 - does this way work</summary>
 <br>
 
 ```plain
 helm ls
-```
-{{exec}}
+``` {{exec}}
 
 </details>
 
