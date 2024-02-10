@@ -18,12 +18,9 @@
       "text": "finish.md"
     },
   },
-  
+
   "backend": {
-    "imageid": "kubernetes-ckad-1node"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }
 
-
-
-# helm search repo for all
