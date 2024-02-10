@@ -13,8 +13,12 @@
         "title": "Installation and first contact",
         "text": "step1/text.md"
       }
-    ]
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
   },
+  
   "backend": {
     "imageid": "kubernetes-ckad-1node"
   }
