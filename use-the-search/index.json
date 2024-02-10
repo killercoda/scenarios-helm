@@ -1,0 +1,25 @@
+{
+  "title": "Use the search",
+  "description": "How to search and install a versioned Helm chart",
+  "details": {
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh",
+      "credits": ""
+    },
+    "steps": [
+      {
+        "title": "Installation and first contact",
+        "text": "step1/text.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-ckad-1node"
+  }
+}
+
+
+
+# helm search repo for all
