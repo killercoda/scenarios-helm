@@ -18,8 +18,14 @@
     },
     "steps": [
       {
-        "title": "Installation and first contact",
-        "text": "step1/text.md"
+        "title": "Search",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Search and install",
+        "text": "step2/text.md"
+        //"verify": "step1/verify.sh"
       }
     ],
     "finish": {
