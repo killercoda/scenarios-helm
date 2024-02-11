@@ -2,6 +2,14 @@
   "title": "Use the search",
   "description": "How to search and install a versioned Helm chart",
   "details": {
+    "assets": {
+      "host01": [
+        {"file": "init.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "k8s.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "wait-init.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "solution.sh", "target": "/var/run/kc-internal", "chmod": "+x"}
+      ]
+    },
     "intro": {
       "text": "init/init.md",
       "background": "init/background.sh",
