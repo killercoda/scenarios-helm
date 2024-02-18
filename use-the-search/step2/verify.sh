@@ -15,7 +15,7 @@ LOGFILE=/ks/step1-verify.log
 
     date
 
-    if helm get notes apache | grep 10.0.5; then exit 1; fi
+    if helm get notes apache | grep 10.0.4; then exit 1; fi
 
 } >> ${LOGFILE} 2>&1
 
