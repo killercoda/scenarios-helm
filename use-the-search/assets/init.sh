@@ -19,7 +19,6 @@ chmod a+x /usr/bin/helm
 rm -rf linux-amd64 helm-v3.8.2-linux-amd64.tar.gz
 
 
-helm repo add nginx-stable https://helm.nginx.com/stable
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 

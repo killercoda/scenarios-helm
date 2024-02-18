@@ -15,7 +15,7 @@ LOGFILE=/ks/step1-verify.log
 
     date
 
-    diff <(cat /root/releases) <(helm search repo nginx-ingress --version 1.3 -l)
+    diff <(cat /root/releases) <(helm search repo nginx-ingress-controller --version 9.9 -l)
 
 } >> ${LOGFILE} 2>&1
 
