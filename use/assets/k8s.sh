@@ -16,3 +16,4 @@ done
 
 
 touch /ks/.k8sfinished
+

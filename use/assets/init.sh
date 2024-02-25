@@ -31,3 +31,4 @@ helm -n team-yellow install apiserver bitnami/apache
 
 # mark init finished
 touch /ks/.initfinished
+

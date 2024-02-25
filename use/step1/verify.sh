@@ -21,3 +21,4 @@ LOGFILE=/ks/step1-verify.log
 } >> ${LOGFILE} 2>&1
 
 echo "done" # let Validator know success
+

@@ -4,3 +4,4 @@
 # DO NOT change file: add changes in init.sh
 
 FILE=/ks/init.sh; while ! test -f ${FILE}; do clear; sleep 0.1; done; bash ${FILE} > /ks/init.log
+

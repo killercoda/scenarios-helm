@@ -49,3 +49,4 @@ helm install happy-panda bitnami/wordpress
 ```
 helm ls
 ```{{exec}}
+
