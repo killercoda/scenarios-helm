@@ -9,13 +9,13 @@
         {"file": "wait-init.sh", "target": "/ks", "chmod": "+x"}
       ]
     },
-  "intro": {
+    "intro": {
       "text": "intro.md",
       "background": "init/background.sh",
       "foreground": "init/foreground.sh",
       "credits": ""
     },
-  "steps": [
+    "steps": [
       {
         "title": "Get notes",
         "text": "step1/text.md",
@@ -31,7 +31,10 @@
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       }
-    ]
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-1node"
