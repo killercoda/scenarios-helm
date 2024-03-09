@@ -10,7 +10,7 @@
       ]
     },
   "intro": {
-      "text": "init/init.md",
+      "text": "intro.md",
       "background": "init/background.sh",
       "foreground": "init/foreground.sh",
       "credits": ""

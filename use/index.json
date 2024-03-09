@@ -2,6 +2,19 @@
   "title": "Use Helm",
   "description": "List, install and delete Helm Charts",
   "details": {
+    "assets": {
+      "host01": [
+        {"file": "init.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "k8s.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "wait-init.sh", "target": "/ks", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh",
+      "credits": ""
+    },
     "steps": [
       {
         "title": "Find all Helm releases in the cluster",
@@ -21,19 +34,6 @@
     ],
     "finish": {
       "text": "finish.md"
-    },
-    "intro": {
-      "text": "init/init.md",
-      "background": "init/background.sh",
-      "foreground": "init/foreground.sh",
-      "credits": ""
-    },
-    "assets": {
-      "host01": [
-        {"file": "init.sh", "target": "/ks", "chmod": "+x"},
-        {"file": "k8s.sh", "target": "/ks", "chmod": "+x"},
-        {"file": "wait-init.sh", "target": "/ks", "chmod": "+x"}
-      ]
     }
   },
   "backend": {
