@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "path": "install" },
+    { "path": "use" },
+    { "path": "use-the-search" },
+    { "path": "helm-get" }
+  ]
+}
+

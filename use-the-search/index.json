@@ -1,6 +1,6 @@
 {
-  "title": "Use Helm",
-  "description": "List, install and delete Helm Charts",
+  "title": "Use the search",
+  "description": "How to search and install a versioned Helm chart",
   "details": {
     "assets": {
       "host01": [
@@ -10,26 +10,21 @@
       ]
     },
     "intro": {
-      "text": "intro.md",
+      "text": "init/init.md",
       "background": "init/background.sh",
       "foreground": "init/foreground.sh",
       "credits": ""
     },
     "steps": [
       {
-        "title": "Find all Helm releases in the cluster",
+        "title": "Search",
         "text": "step1/text.md",
         "verify": "step1/verify.sh"
       },
       {
-        "title": "Delete a Helm release",
+        "title": "Search and install",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
-      },
-      {
-        "title": "Install a Helm chart",
-        "text": "step3/text.md",
-        "verify": "step3/verify.sh"
       }
     ],
     "finish": {

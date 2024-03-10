@@ -1,6 +1,6 @@
 {
-  "title": "Use Helm",
-  "description": "List, install and delete Helm Charts",
+  "title": "Helm get",
+  "description": "How to get details of installed charts",
   "details": {
     "assets": {
       "host01": [
@@ -17,17 +17,17 @@
     },
     "steps": [
       {
-        "title": "Find all Helm releases in the cluster",
+        "title": "Get notes",
         "text": "step1/text.md",
         "verify": "step1/verify.sh"
       },
       {
-        "title": "Delete a Helm release",
+        "title": "Get values",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
       },
       {
-        "title": "Install a Helm chart",
+        "title": "Get manifest",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       }
