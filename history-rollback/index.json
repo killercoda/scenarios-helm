@@ -18,8 +18,15 @@
     "steps": [
       {
         "title": "Helm history",
-        "text": "step1/text.md",
-        "verify": "step1/verify.sh"
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Helm get",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Helm rollback",
+        "text": "step3/text.md"
       }
     ],
     "finish": {

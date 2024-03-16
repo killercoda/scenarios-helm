@@ -7,7 +7,7 @@
 # though exit code 0 and "done" is returned. This could be after X amount of commands, or too
 # long execution time, not sure why. Hence this file should be as short as possible.
 
-LOGFILE=/ks/step1-verify.log
+LOGFILE=/ks/step2-verify.log
 #set -e # exit once any command fails
 
 {
@@ -15,7 +15,7 @@ LOGFILE=/ks/step1-verify.log
 
     date
 
-    diff <(cat /root/notes) <(helm get notes webserver)
+    diff <(cat /root/values) <(helm get values webserver --version 3)
 
 } >> ${LOGFILE} 2>&1
 
