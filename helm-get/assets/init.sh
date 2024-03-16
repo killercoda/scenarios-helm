@@ -23,7 +23,8 @@ helm repo add nginx-stable https://helm.nginx.com/stable
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 
-helm install webserver bitnami/apache --set commonAnnotations.Hello=World!
+helm install webserver bitnami/apache --set service.type=ClusterIP \
+  --set commonAnnotations.Hello=World!
 
 
 # mark init finished
