@@ -15,7 +15,7 @@ LOGFILE=/ks/step2-verify.log
 
     date
 
-    diff <(cat /root/values) <(helm get values webserver --revision 3)
+    if helm history webserver | grep 'Rollback to 2'; then exit 1; fi
 
 } >> ${LOGFILE} 2>&1
 
