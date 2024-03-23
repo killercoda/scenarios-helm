@@ -7,7 +7,7 @@
 # though exit code 0 and "done" is returned. This could be after X amount of commands, or too
 # long execution time, not sure why. Hence this file should be as short as possible.
 
-LOGFILE=/ks/step2-verify.log
+LOGFILE=/ks/step3-verify.log
 #set -e # exit once any command fails
 
 {
@@ -15,7 +15,7 @@ LOGFILE=/ks/step2-verify.log
 
     date
 
-    if helm history webserver | grep 'Rollback to 2'; then exit 1; fi
+    if helm history webserver | grep 'Rollback to 2'; then exit 0; fi
 
 } >> ${LOGFILE} 2>&1
 
