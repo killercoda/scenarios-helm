@@ -15,7 +15,7 @@ LOGFILE=/ks/step2-verify.log
 
     date
 
-    diff <(cat /root/values) <(helm get values webserver --revision 3)
+    diff <(cat /root/values) <(helm get values webserver --revision 2)
 
 } >> ${LOGFILE} 2>&1
 
