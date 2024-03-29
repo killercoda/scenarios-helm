@@ -3,7 +3,8 @@
     { "path": "install" },
     { "path": "use" },
     { "path": "use-the-search" },
-    { "path": "helm-get" }
+    { "path": "helm-get" },
+    { "path": "history-rollback" }
   ]
 }
 
