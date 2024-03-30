@@ -4,7 +4,8 @@
     { "path": "use" },
     { "path": "use-the-search" },
     { "path": "helm-get" },
-    { "path": "history-rollback" }
+    { "path": "history-rollback" },
+    { "path": "production" }
   ]
 }
 
