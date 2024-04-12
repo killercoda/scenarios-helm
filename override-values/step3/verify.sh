@@ -12,18 +12,20 @@ LOGFILE=/ks/step2-verify.log
 
 {
     set +e
+    target_message="You rock it !"
+    values_file_path="/charts/values.yaml"
     # Retrieve the value of the key "message" from the mock-app release
     message=$(helm get values --all mock-app -n dev-ns | yq e '.message' -)
 
     # Check if the message is not "Test is valid"
-    if [ "$message" != "You rock it !" ]; then
+    if [ "$message" != "$target_message" ]; then
         exit 1
     fi
 
     # Check if the file exists
-    if [ -f "/charts/values.yaml" ]; then
+    if [ -f "$values_file_path" ]; then
         # Check if the file does not contain the specified string
-        if ! grep -q "message: You rock it !" "/charts/values.yaml"; then
+        if ! grep -q "message: $target_message" "$values_file_path"; then
             exit 1
         fi
     else
