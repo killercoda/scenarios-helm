@@ -6,7 +6,7 @@
     { "path": "helm-get" },
     { "path": "history-rollback" },
     { "path": "production" },
-    { "path": "test" }
+    { "path": "override-values" }
   ]
 }
 
