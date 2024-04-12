@@ -11,6 +11,7 @@ Let's explore what we have deployed
 helm list -n dev-ns
 ```{{exec}}
 
+We have a single release named `mock-app` deployed in the target namespace.
 </details>
 
 <br>
@@ -20,6 +21,7 @@ helm list -n dev-ns
 ```plain
 kubectl get all -n dev-ns
 ```{{exec}}
+
 
 </details>
 
@@ -42,5 +44,6 @@ curl -s http://${SERVICE_IP}:${PORT} -w "\n"
 ```plain
 helm get values --all mock-app -n dev-ns
 ```{{exec}}
+The received message is passed through the default values file. The message value is `You will override this message`.
 
 </details>
