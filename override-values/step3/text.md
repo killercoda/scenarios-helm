@@ -25,7 +25,7 @@ helm upgrade -h
 <br>
 
 ```plain
-echo "message: You rock it !" >> /charts/values.yaml
+echo "message: You are overriding the message using a values file. You rock it!" >> /charts/values.yaml
 helm -n dev-ns upgrade --install mock-app /charts/mock-app-1.0.0.tgz  --values /charts/values.yaml
 ```{{exec}}
 

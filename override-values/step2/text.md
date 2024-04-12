@@ -20,7 +20,7 @@ helm upgrade -h
 <br>
 
 ```plain
-helm -n dev-ns upgrade --install mock-app /charts/mock-app-1.0.0.tgz --set message="I override the message using an inline value"
+helm -n dev-ns upgrade --install mock-app /charts/mock-app-1.0.0.tgz --set message="You are overriding the message using an inline value. Good job !"
 ```{{exec}}
 
 </details>
