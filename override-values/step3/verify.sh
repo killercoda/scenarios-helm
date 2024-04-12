@@ -12,7 +12,7 @@ LOGFILE=/ks/step2-verify.log
 
 {
     set +e
-    target_message="You rock it !"
+    target_message="You are overriding the message using a values file. You rock it!"
     values_file_path="/charts/values.yaml"
     # Retrieve the value of the key "message" from the mock-app release
     message=$(helm get values --all mock-app -n dev-ns | yq e '.message' -)

@@ -2,7 +2,7 @@ In this step, you'll update the current message value using the values file appr
 
 By adopting this method, you'll have the ability to easily monitor the latest configurations directly from your Git repository, which is highly recommended.
 
-Firstly, create a `values.yaml` file within the `/charts` folder. Within this file, set the value of the message to `You rock it!`.
+Firstly, create a `values.yaml` file within the `/charts` folder. Within this file, set the value of the message to `You are overriding the message using a values file. You rock it!`.
 
 Then, upgrade the release to use the new message by specifying the values file, rather than the previous one.
 

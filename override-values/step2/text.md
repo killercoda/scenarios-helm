@@ -1,6 +1,6 @@
 In this step, you will replace the existing message value using the inline values method. 
 
-Upgrade the release to use the message `I override the message using an inline value` instead of the previous one.
+Upgrade the release to use the message `I am overriding the message using an inline value` instead of the previous one.
 
 **NOTE: The chart is packaged and stored in /charts folder**
 
