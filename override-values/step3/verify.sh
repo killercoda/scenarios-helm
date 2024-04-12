@@ -7,15 +7,18 @@
 # though exit code 0 and "done" is returned. This could be after X amount of commands, or too
 # long execution time, not sure why. Hence this file should be as short as possible.
 
-LOGFILE=/ks/step3-verify.log
+LOGFILE=/ks/step2-verify.log
 #set -e # exit once any command fails
 
 {
-    set -e
+    set +e
+    # Retrieve the value of the key "message" from the mock-app release
+    message=$(helm get values --all mock-app -n dev-ns | yq e '.message' -)
 
-    date
-
-    helm -n team-yellow status devserver
+    # Check if the message is not "Test is valid"
+    if [ "$message" != "You rock it !" ]; then
+        exit 1
+    fi
 
 } >> ${LOGFILE} 2>&1
 

@@ -1,8 +1,5 @@
 
-Install the Helm chart `nginx-stable/nginx-ingress` into *Namespace* `team-yellow`.
-
-The release should've the name `devserver`.
-
+Upgrade the release to set this message: `You rock it !`.
 
 
 <br>
@@ -10,11 +7,10 @@ The release should've the name `devserver`.
 <br>
 
 ```plain
-helm install -h
+helm upgrade -h
 ```{{exec}}
 
 </details>
-
 
 
 <br>
@@ -22,7 +18,7 @@ helm install -h
 <br>
 
 ```plain
-helm -n team-yellow install devserver nginx-stable/nginx-ingress
+helm -n dev-ns upgrade --install mock-app oci://docker.io/benmalekarim/mock-app --set message="You rock it !"
 ```{{exec}}
 
 </details>
