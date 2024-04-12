@@ -1,0 +1,43 @@
+{
+  "title": "Use Helm",
+  "description": "List, install and delete Helm Charts",
+  "details": {
+    "assets": {
+      "host01": [
+        {"file": "init.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "k8s.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "wait-init.sh", "target": "/ks", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh",
+      "credits": ""
+    },
+    "steps": [
+      {
+        "title": "Find all Helm releases in the cluster",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Delete a Helm release",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Install a Helm chart",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
+
