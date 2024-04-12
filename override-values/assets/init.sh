@@ -20,7 +20,6 @@ rm -rf linux-amd64 helm-v3.8.2-linux-amd64.tar.gz
 
 mkdir /charts && cd /charts
 helm pull oci://docker.io/benmalekarim/mock-app
-tar -xzvf mock-app-1.0.0.tgz
 
 kubectl create ns dev-ns
 helm -n dev-ns upgrade --install mock-app oci://docker.io/benmalekarim/mock-app

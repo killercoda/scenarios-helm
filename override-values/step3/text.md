@@ -18,7 +18,8 @@ helm upgrade -h
 <br>
 
 ```plain
-helm -n dev-ns upgrade --install mock-app oci://docker.io/benmalekarim/mock-app --set message="You rock it !"
+echo "message: You rock it !" >> /charts/values.yaml
+helm -n dev-ns upgrade --install mock-app /charts/mock-app-1.0.0.tgz  --values /charts/values.yaml
 ```{{exec}}
 
 </details>
