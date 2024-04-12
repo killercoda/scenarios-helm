@@ -1,61 +1,46 @@
+In this scenario, we are deploying a mock application using Helm in the `dev-ns` namespace.
 
-Write the list of all Helm releases in the cluster into `/root/releases`.
-
-
-
-
-<br>
-<details><summary>Info</summary>
-<br>
-
-```plain
-Helm Chart: Kubernetes YAML template-files combined into a single package, Values allow customisation
-
-Helm Release: Installed instance of a Chart
-
-Helm Values: Allow to customise the YAML template-files in a Chart when creating a Release
-```
-
-</details>
-
-
-
+Let's explore what we have deployed
 
 
 <br>
-<details><summary>Tip 1</summary>
+<details><summary>Verify the deployed release</summary>
 <br>
 
 ```plain
-helm ls
+helm list -n dev-ns
 ```{{exec}}
 
 </details>
 
-
-
 <br>
-<details><summary>Tip 2</summary>
+<details><summary>Verify the deployed resources</summary>
 <br>
 
 ```plain
-helm ls -A
+kubectl get all -n dev-ns
 ```{{exec}}
 
 </details>
 
-
 <br>
-<details><summary>Solution</summary>
-<br>
-
-Helm charts can be installed in any *Namespaces*, so here we have to look in all.
-
+<details><summary>Verify the content of the deployed container</summary>
 <br>
 
 ```plain
-helm ls -A > /root/releases
+export PORT=5000
+export SERVICE_IP=$(kubectl get svc -n dev-ns -l app=mock-app -o jsonpath='{.items[0].spec.clusterIP}')
+curl -s http://${SERVICE_IP}:${PORT} -w "\n"
 ```{{exec}}
 
 </details>
 
+<br>
+<details><summary>Verify the printed message</summary>
+<br>
+
+```plain
+helm get values mock-app -n dev-ns
+```{{exec}}
+
+</details>
