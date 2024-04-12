@@ -12,7 +12,7 @@ LOGFILE=/ks/step2-verify.log
 
 {
     set +e
-    target_message="I am overriding the message using an inline value"
+    target_message="You are overriding the message using an inline value. Good job !"
     # Retrieve the value of the key "message" from the mock-app release
     message=$(helm get values --all mock-app -n dev-ns | yq e '.message' -)
 
