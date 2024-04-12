@@ -25,6 +25,8 @@ LOGFILE=/ks/step2-verify.log
         # Check if the file does not contain the specified string
         if ! grep -q "message: You rock it!" "/charts/values.yaml"; then
             exit 1
+        else
+            echo "Supeer"
         fi
     else
         exit 1
