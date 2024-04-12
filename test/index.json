@@ -1,6 +1,6 @@
 {
-  "title": "Use Helm",
-  "description": "List, install and delete Helm Charts",
+  "title": "Multi-environments",
+  "description": "multi environments description",
   "details": {
     "assets": {
       "host01": [
