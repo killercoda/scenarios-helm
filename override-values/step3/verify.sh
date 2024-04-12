@@ -23,7 +23,7 @@ LOGFILE=/ks/step2-verify.log
     # Check if the file exists
     if [ -f "/charts/values.yaml" ]; then
         # Check if the file does not contain the specified string
-        if ! grep -q "message: You rock it!" "$file_path"; then
+        if ! grep -q "message: You rock it!" "/charts/values.yaml"; then
             exit 1
         fi
     else
