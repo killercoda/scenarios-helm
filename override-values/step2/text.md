@@ -1,5 +1,5 @@
 
-Delete the Helm release `apiserver`.
+Upgrade the release to set this message: `I override the message using an inline value`.
 
 
 <br>
@@ -7,7 +7,7 @@ Delete the Helm release `apiserver`.
 <br>
 
 ```plain
-helm uninstall -h
+helm upgrade -h
 ```{{exec}}
 
 </details>
@@ -18,8 +18,7 @@ helm uninstall -h
 <br>
 
 ```plain
-helm ls -A
-helm -n team-yellow uninstall apiserver
+helm -n dev-ns upgrade --install mock-app --set message="I override the message using an inline value"
 ```{{exec}}
 
 </details>
