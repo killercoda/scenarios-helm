@@ -40,7 +40,7 @@ curl -s http://${SERVICE_IP}:${PORT} -w "\n"
 <br>
 
 ```plain
-helm get values mock-app -n dev-ns
+helm get values --all mock-app -n dev-ns
 ```{{exec}}
 
 </details>
