@@ -13,7 +13,7 @@ LOGFILE=/ks/step2-verify.log
 {
     set +e
 
-    if helm -n team-yellow status apiserver; then exit 1; fi
+    if helm get values --all mock-app -n dev-ns | yq '.message' - | grep "I override the message using an inline value"; then exit 1; fi
 
 } >> ${LOGFILE} 2>&1
 
