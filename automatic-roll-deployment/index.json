@@ -1,5 +1,5 @@
 {
-  "title": "automatically-roll-deployment",
+  "title": "automatic-roll-deployment",
   "description": "Automatically rollout deployment when configmaps are updated",
   "details": {
     "assets": {
@@ -17,18 +17,26 @@
     },
     "steps": [
       {
-        "title": "Explore deployed helm chart",
+        "title": "Explore Deployed Helm Chart",
         "text": "step1/text.md"
       },
       {
-        "title": "Override helm values using inline values",
+        "title": "Update Configmap Values",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
       },
       {
-        "title": "Override helm values using values file",
-        "text": "step3/text.md",
-        "verify": "step3/verify.sh"
+        "title": "Explore Post Update Configmap",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Manual Rollout Restart",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Automatic Rollout",
+        "text": "step5/text.md"
       }
     ],
     "finish": {
