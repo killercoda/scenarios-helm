@@ -1,6 +1,6 @@
 {
-  "title": "Override values",
-  "description": "Override and modify values in a Helm chart",
+  "title": "automatically-roll-deployment",
+  "description": "Automatically rollout deployment when configmaps are updated",
   "details": {
     "assets": {
       "host01": [

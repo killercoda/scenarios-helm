@@ -35,6 +35,8 @@ export SERVICE_IP=$(kubectl get svc -n dev-ns -l app=mock-app -o jsonpath='{.ite
 curl -s http://${SERVICE_IP}:${PORT} -w "\n"
 ```{{exec}}
 
+as you can see, our application is returning: Hello Killercoda Folks! You recieved this message: You will override this message.
+
 </details>
 
 <br>
@@ -44,7 +46,7 @@ curl -s http://${SERVICE_IP}:${PORT} -w "\n"
 ```plain
 kubectl get cm -n dev-ns -l app=mock-app -ojsonpath='{.items[0].data}' && printf "\n"
 ```{{exec}}
-The received message is passed through the default values file. The message value is `You will override this message`.
+`You will override this message` is the value of the key `MESSAGE` used by our container
 
 </details>
 
@@ -54,6 +56,17 @@ The received message is passed through the default values file. The message valu
 
 ```plain
 cat /charts/mock-app/templates/configmap.yaml
+```{{exec}}
+The received message is passed through helm values. The used value is "message".
+
+</details>
+
+<br>
+<details><summary>Verify the content of the default vaules file</summary>
+<br>
+
+```plain
+cat /charts/mock-app/values.yaml
 ```{{exec}}
 The received message is passed through the default values file. The message value is `You will override this message`.
 
