@@ -7,7 +7,8 @@
     { "path": "helm-get" },
     { "path": "history-rollback" },
     { "path": "production" },
-    { "path": "override-values" }
+    { "path": "override-values" },
+    { "path": "automatically-roll-deployment" }
   ]
 }
 
