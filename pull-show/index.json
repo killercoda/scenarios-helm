@@ -1,0 +1,36 @@
+{
+  "title": "Helm pull and show",
+  "description": "How to get download and inspect charts",
+  "details": {
+    "assets": {
+      "host01": [
+        {"file": "init.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "k8s.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "wait-init.sh", "target": "/ks", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh",
+      "credits": ""
+    },
+    "steps": [
+      {
+        "title": "Inspect a chart",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Download a chart",
+        "text": "step2/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
+
