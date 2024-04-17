@@ -37,6 +37,10 @@
       {
         "title": "Automatic Rollout",
         "text": "step5/text.md"
+      },
+      {
+        "title": "Verification Automatic Rollout",
+        "text": "step6/text.md"
       }
     ],
     "finish": {
