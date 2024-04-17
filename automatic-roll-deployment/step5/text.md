@@ -16,7 +16,7 @@ By leveraging these annotations, Helm ensures that changes to configuration data
 
 Update the deployment template in `/charts/mock-app/templates/deployment.yaml` to add annotations.
 
-```plain
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
