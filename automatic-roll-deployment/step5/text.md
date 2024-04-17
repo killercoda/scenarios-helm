@@ -43,5 +43,5 @@ spec:
           envFrom:
           - configMapRef:
               name: {{ .Values.appName }}-configmap
-```{{exec}}
+```
 </details>
