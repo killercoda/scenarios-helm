@@ -1,4 +1,4 @@
-In this step, you will replace the existing message value using the inline values method. 
+In this step, you will replace the existing message value. 
 
 Upgrade the release to use the message `You are overriding the message. Does the pod take this change in consideration ?` instead of the previous one.
 

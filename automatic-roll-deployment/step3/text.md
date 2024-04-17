@@ -1,6 +1,4 @@
-In this scenario, we are deploying a mock application using Helm in the `dev-ns` namespace.
-
-Let's explore what we have deployed
+Let's explore what we have changed
 
 
 <br>
