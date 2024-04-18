@@ -12,14 +12,20 @@ LOGFILE=/ks/step2-verify.log
 
 {
     set +e
-    target_message="You are overriding the message. Does the pod take this change in consideration ?"
-    # Retrieve the value of the key "message" from the mock-app release
-    message=$(helm get values --all mock-app -n dev-ns | yq e '.message' -)
-
-    # Check if the message is not "Test is valid"
-    if [ "$message" != "$target_message" ]; then
+    # Check if HPA exists in prod-ns namespace
+    if kubectl get hpa -n prod-ns | grep -q hpa; then
+        echo "HPA is deployed in prod-ns namespace."
+    else
         exit 1
     fi
+
+    # Check if HPA exists in dev-ns namespace
+    if kubectl get hpa -n dev-ns | grep -q hpa; then
+        echo "HPA is deployed in dev-ns namespace."
+    else
+        exit 1
+    fi
+
 
 } >> ${LOGFILE} 2>&1
 

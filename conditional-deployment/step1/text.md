@@ -13,59 +13,18 @@ We notice that we have 2 namespaces that will be used in that scenario `prod-ns`
 </details>
 
 <br>
-<details><summary>Verify the deployed resources</summary>
+<details><summary>Verify chart templates</summary>
 <br>
+
+Our Helm chart is stored in /charts/mock-app. Let's explore its templates.
 
 ```plain
-kubectl get all -n dev-ns
+cat /charts/mock-app/templates
 ```{{exec}}
+The chart is composed of: deployment, configmap, service and hpa.
 
+In our scenario, we will be focusing on the hpa.
 
-</details>
-
-<br>
-<details><summary>Verify the content of the deployed container</summary>
-<br>
-
-```plain
-export PORT=5000
-export SERVICE_IP=$(kubectl get svc -n dev-ns -l app=mock-app -o jsonpath='{.items[0].spec.clusterIP}')
-curl -s http://${SERVICE_IP}:${PORT} -w "\n"
-```{{exec}}
-
-as you can see, our application is returning: Hello Killercoda Folks! You recieved this message: You will override this message.
-
-</details>
-
-<br>
-<details><summary>Verify the content of the deployed configmap </summary>
-<br>
-
-```plain
-kubectl get cm -n dev-ns -l app=mock-app -ojsonpath='{.items[0].data}' && printf "\n"
-```{{exec}}
-`You will override this message` is the value of the key `MESSAGE` used by our container
-
-</details>
-
-<br>
-<details><summary>Verify the content of the configmap template</summary>
-<br>
-
-```plain
-cat /charts/mock-app/templates/configmap.yaml
-```{{exec}}
-The received message is passed through helm values. The used value is "message".
-
-</details>
-
-<br>
-<details><summary>Verify the content of the default vaules file</summary>
-<br>
-
-```plain
-cat /charts/mock-app/values.yaml
-```{{exec}}
-The received message is passed through the default values file. The message value is `You will override this message`.
+HPA = Horizontal Pod Autoscaler
 
 </details>
