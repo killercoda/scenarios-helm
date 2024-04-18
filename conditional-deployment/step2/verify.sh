@@ -21,8 +21,6 @@ LOGFILE=/ks/step2-verify.log
 
     # Check if HPA exists in dev-ns namespace
     if kubectl get hpa -n dev-ns | grep -q hpa; then
-        echo "HPA is deployed in dev-ns namespace."
-    else
         exit 1
     fi
 
