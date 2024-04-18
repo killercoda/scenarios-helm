@@ -8,7 +8,7 @@
     { "path": "history-rollback" },
     { "path": "production" },
     { "path": "override-values" },
-    { "path": "automatic-roll-deployment" }
+    { "path": "automatic-roll-deployment" },
+    { "path": "conditional-deployment" }
   ]
 }
-
