@@ -19,7 +19,7 @@ We notice that we have 2 namespaces that will be used in that scenario `prod-ns`
 Our Helm chart is stored in /charts/mock-app. Let's explore its templates.
 
 ```plain
-cat /charts/mock-app/templates
+ls /charts/mock-app/templates
 ```{{exec}}
 The chart is composed of: deployment, configmap, service and hpa.
 

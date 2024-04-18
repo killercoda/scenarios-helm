@@ -40,7 +40,7 @@ helm -n prod-ns upgrade --install mock-app-prod /charts/mock-app/. --set environ
 ```{{exec}}
 
 ```plain
-helm -n prod-ns upgrade --install mock-app-dev /charts/mock-app/. --set environment=dev
+helm -n dev-ns upgrade --install mock-app-dev /charts/mock-app/. --set environment=dev
 ```{{exec}}
 
 </details>

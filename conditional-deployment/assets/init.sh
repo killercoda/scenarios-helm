@@ -20,10 +20,11 @@ rm -rf linux-amd64 helm-v3.8.2-linux-amd64.tar.gz
 
 mkdir /charts && cd /charts
 git clone https://github.com/BENMALEKarim/helm-scenarios-charts.git
-#cp helm-scenarios-charts/mock-app-2.0.0 .
-#rm -rf helm-scenarios-charts
-#tar -xzvf mock-app-2.0.0.tgz
-#rm -rf mock-app-2.0.0.tgz
+sleep 2s
+cp helm-scenarios-charts/mock-app-2.0.0.tgz .
+rm -rf helm-scenarios-charts
+tar -xzvf mock-app-2.0.0.tgz
+rm -rf mock-app-2.0.0.tgz
 
 kubectl create ns dev-ns
 kubectl create ns prod-ns
