@@ -1,0 +1,54 @@
+{
+  "title": "automatic-roll-deployment",
+  "description": "Automatically rollout deployment when configmaps are updated",
+  "details": {
+    "assets": {
+      "host01": [
+        {"file": "init.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "k8s.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "wait-init.sh", "target": "/ks", "chmod": "+x"}
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh",
+      "credits": ""
+    },
+    "steps": [
+      {
+        "title": "Explore Deployed Helm Chart",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Update Configmap Values",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Explore Post Update Configmap",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Manual Rollout Restart",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Automatic Rollout",
+        "text": "step5/text.md"
+      },
+      {
+        "title": "Verification Automatic Rollout",
+        "text": "step6/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
+
