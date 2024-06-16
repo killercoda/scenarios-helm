@@ -34,7 +34,7 @@ kind: HorizontalPodAutoscaler
 {{- end }}
 ```
 
-Deploy 
+Deploy
 ```plain
 helm -n prod-ns upgrade --install mock-app-prod /charts/mock-app/. --set environment=prod
 ```{{exec}}

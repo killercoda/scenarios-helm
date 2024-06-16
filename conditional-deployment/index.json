@@ -1,5 +1,5 @@
 {
-  "title": "conditional-deployment",
+  "title": "Conditional Deployment",
   "description": "Discover how to incorporate conditions into your Helm chart templates.",
   "details": {
     "assets": {

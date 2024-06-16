@@ -24,7 +24,7 @@ tar -xzvf mock-app-1.0.0.tgz
 rm -rf mock-app-1.0.0.tgz
 
 kubectl create ns dev-ns
-helm -n dev-ns upgrade --install mock-app oci://docker.io/benmalekarim/mock-app
+helm -n dev-ns install --wait mock-app oci://docker.io/benmalekarim/mock-app
 
 # mark init finished
 touch /ks/.initfinished

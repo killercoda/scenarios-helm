@@ -22,7 +22,7 @@ mkdir /charts && cd /charts
 helm pull oci://docker.io/benmalekarim/mock-app
 
 kubectl create ns dev-ns
-helm -n dev-ns upgrade --install mock-app oci://docker.io/benmalekarim/mock-app
+helm -n dev-ns install --wait mock-app oci://docker.io/benmalekarim/mock-app
 
 # mark init finished
 touch /ks/.initfinished

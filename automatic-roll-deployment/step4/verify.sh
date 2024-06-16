@@ -12,7 +12,7 @@ LOGFILE=/ks/step2-verify.log
 
 {
     set +e
-    target_message="Hello Killercoda Folks! You recieved this message: You are overriding the message. Does the pod take this change in consideration ?"
+    target_message="Hello Killercoda Folks! You recieved this message: You are overriding the message. Does the pod take this change in consideration?"
     # Retrieve the value of the key "message" from the mock-app release
     export PORT=5000
     export SERVICE_IP=$(kubectl get svc -n dev-ns -l app=mock-app -o jsonpath='{.items[0].spec.clusterIP}')

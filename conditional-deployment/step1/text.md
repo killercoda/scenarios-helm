@@ -1,6 +1,5 @@
 Let's explore what we have in our scenario
 
-
 <br>
 <details><summary>Verify namespaces</summary>
 <br>
@@ -9,7 +8,7 @@ Let's explore what we have in our scenario
 kubectl get ns
 ```{{exec}}
 
-We notice that we have 2 namespaces that will be used in that scenario `prod-ns` and `dev-ns`
+We can notice that we have 2 namespaces that will be used in that scenario `prod-ns` and `dev-ns`.
 </details>
 
 <br>
@@ -28,3 +27,4 @@ In our scenario, we will be focusing on the hpa.
 HPA = Horizontal Pod Autoscaler
 
 </details>
+

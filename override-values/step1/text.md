@@ -47,3 +47,4 @@ helm get values --all mock-app -n dev-ns
 The received message is passed through the default values file. The message value is `You will override this message`.
 
 </details>
+

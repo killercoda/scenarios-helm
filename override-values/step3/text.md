@@ -1,4 +1,4 @@
-In this step, you'll update the current message value using the values file approach. 
+In this step, you'll update the current message value using the values file approach.
 
 By adopting this method, you'll have the ability to easily monitor the latest configurations directly from your Git repository, which is highly recommended.
 
@@ -26,7 +26,7 @@ helm upgrade -h
 
 ```plain
 echo "message: You are overriding the message using a values file. You rock it!" >> /charts/values.yaml
-helm -n dev-ns upgrade --install mock-app /charts/mock-app-1.0.0.tgz  --values /charts/values.yaml
+helm -n dev-ns upgrade mock-app /charts/mock-app-1.0.0.tgz --values /charts/values.yaml
 ```{{exec}}
 
 </details>

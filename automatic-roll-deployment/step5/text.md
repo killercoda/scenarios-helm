@@ -6,9 +6,11 @@ Here's a brief explanation:
 
 **Checksum Annotation:** When Helm installs or updates a chart, it calculates a checksum for the ConfigMap or Secret used in the Deployment. This checksum is stored as an annotation in the Deployment resource.
 
-**Automatic Rollout:** When a change is made to the ConfigMap or Secret, Helm updates the resource and changes the checksum. Kubernetes detects this change and triggers a rolling update of the Deployment to ensure that pods are updated with the new configuration.
+**Automatic Rollout:** When a change is made to the ConfigMap or Secret, Helm updates the resource and changes the checksum annotation in the Deployment resource. Kubernetes detects this change and triggers a rolling update of the Deployment to ensure that pods are updated with the new configuration.
 
 By leveraging these annotations, Helm ensures that changes to configuration data are automatically propagated to the relevant resources in the cluster, maintaining consistency and reliability of the application.
+
+[Helm documentation](https://helm.sh/docs/howto/charts_tips_and_tricks/#automatically-roll-deployments).
 
 <br>
 <details><summary>Update deployment template</summary>
@@ -24,7 +26,7 @@ metadata:
   labels:
     app: {{ .Values.appName }}
 spec:
-  replicas: 1 
+  replicas: 1
   selector:
     matchLabels:
       app: {{ .Values.appName }}
@@ -45,3 +47,4 @@ spec:
               name: {{ .Values.appName }}-configmap
 ```
 </details>
+
