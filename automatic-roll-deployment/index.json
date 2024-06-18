@@ -1,5 +1,5 @@
 {
-  "title": "automatic-roll-deployment",
+  "title": "Automatic Rollout Deployment",
   "description": "Automatically rollout deployment when configmaps are updated",
   "details": {
     "assets": {

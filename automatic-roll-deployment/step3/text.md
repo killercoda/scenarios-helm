@@ -8,7 +8,7 @@ Let's explore what we have changed
 ```plain
 kubectl get cm -n dev-ns -l app=mock-app -ojsonpath='{.items[0].data}' && printf "\n"
 ```{{exec}}
-The message value is updated with: "You are overriding the message. Does the pod take this change in consideration ?"
+The message value is updated with: "You are overriding the message. Does the pod take this change in consideration?".
 </details>
 
 <br>
@@ -21,9 +21,11 @@ export SERVICE_IP=$(kubectl get svc -n dev-ns -l app=mock-app -o jsonpath='{.ite
 curl -s http://${SERVICE_IP}:${PORT} -w "\n"
 ```{{exec}}
 
-as you can see, our application is returning the previous message: Hello Killercoda Folks! You recieved this message: You will override this message.
+As you can see, our application is returning the previous message: Hello Killercoda Folks! You recieved this message: You will override this message.
 
 </details>
+
+
 
 **Explanation:**
 

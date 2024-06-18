@@ -35,12 +35,12 @@ export SERVICE_IP=$(kubectl get svc -n dev-ns -l app=mock-app -o jsonpath='{.ite
 curl -s http://${SERVICE_IP}:${PORT} -w "\n"
 ```{{exec}}
 
-as you can see, our application is returning: Hello Killercoda Folks! You recieved this message: You will override this message.
+As you can see, our application is returning: Hello Killercoda Folks! You recieved this message: You will override this message.
 
 </details>
 
 <br>
-<details><summary>Verify the content of the deployed configmap </summary>
+<details><summary>Verify the content of the deployed configmap</summary>
 <br>
 
 ```plain
@@ -71,3 +71,4 @@ cat /charts/mock-app/values.yaml
 The received message is passed through the default values file. The message value is `You will override this message`.
 
 </details>
+

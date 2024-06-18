@@ -17,7 +17,7 @@
     },
     "steps": [
       {
-        "title": "Explore deployed helm chart",
+        "title": "Explore the deployed helm chart",
         "text": "step1/text.md"
       },
       {
