@@ -22,7 +22,7 @@ helm install -h
 <br>
 
 ```plain
-helm -n team-yellow install devserver nginx-stable/nginx-ingress
+helm -n team-yellow install devserver nginx-stable/nginx-ingress --set controller.debug.enable=false
 ```{{exec}}
 
 </details>
