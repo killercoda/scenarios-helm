@@ -12,11 +12,11 @@ bash /ks/k8s.sh
 
 
 # scenario specific
-wget https://get.helm.sh/helm-v3.8.2-linux-amd64.tar.gz
-tar xzf helm-v3.8.2-linux-amd64.tar.gz
+wget https://get.helm.sh/helm-v4.1.1-linux-amd64.tar.gz
+tar xzf helm-v4.1.1-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/bin/
 chmod a+x /usr/bin/helm
-rm -rf linux-amd64 helm-v3.8.2-linux-amd64.tar.gz
+rm -rf linux-amd64 helm-v4.1.1-linux-amd64.tar.gz
 
 
 helm repo add nginx-stable https://helm.nginx.com/stable
