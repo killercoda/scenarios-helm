@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # this script ensures that k8s is running and working
 
