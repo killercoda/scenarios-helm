@@ -8,7 +8,6 @@ EOT
 
 # init scenario
 rm $0
-bash /ks/k8s.sh
 
 
 # scenario specific
