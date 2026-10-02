@@ -15,7 +15,7 @@ LOGFILE=/ks/step2-verify.log
 
     date
 
-    latest_version=$(helm search repo bitnami/apache --version '~10.0' -o json | jq -r '.[0].version')
+    latest_version=$(helm search repo bitnami/apache --version 10.0 --versions -o json | jq -r '.[1].version')
     if helm get notes apache | grep $latest_version -vqz; then exit 1; fi
 
 } >> ${LOGFILE} 2>&1
